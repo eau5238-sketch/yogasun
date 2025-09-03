@@ -1,0 +1,165 @@
+.bg-yoga-hero {
+  background-image: url("https://images.stockcake.com/public/7/9/0/790e87af-a0d7-448a-9c53-a2aa81ca1097_large/forest-yoga-peace-stockcake.jpg");
+}
+
+.video-modal {
+  display: none;
+}
+
+/* ClassesPage.css */
+
+/* 기존 스타일 */
+.class-card {
+  transition: all 0.3s ease;
+}
+
+.class-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 텍스트 줄 제한 */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 레벨별 색상 강화 */
+.difficulty-badge {
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* 카드 호버 효과 개선 */
+.class-card:hover .thumbnail {
+  transform: scale(1.05);
+}
+
+.thumbnail {
+  transition: transform 0.3s ease;
+}
+
+/* 로딩 애니메이션 */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fa-spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* 반응형 그리드 개선 */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 필터 버튼 스타일 */
+.filter-button {
+  transition: all 0.2s ease;
+}
+
+.filter-button:hover {
+  transform: translateY(-1px);
+}
+
+.filter-button.active {
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+/* 비디오 모달 개선 */
+#videoModal {
+  backdrop-filter: blur(5px);
+}
+
+#videoModal iframe {
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* 카드 내용 영역 */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-description {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.card-actions {
+  margin-top: auto;
+}
+
+/* 강사 이름 스타일 */
+.instructor-name {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* 수업 제목 스타일 */
+.class-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+/* 설명 텍스트 스타일 */
+.class-description {
+  color: #6b7280;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+/* 영상 보기 버튼 */
+.watch-video-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.watch-video-btn:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.watch-video-btn:active {
+  transform: translateY(0);
+}
